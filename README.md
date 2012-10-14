@@ -10,7 +10,7 @@ Most codes are made by k-tsj (https://gist.github.com/3846866). Thanks!!
     git clone git://github.com/ruby/ruby.git
     cd ruby
     autoconf
-    ./configure --disable-install-rdoc --without-ext --enable-shared
+    ./configure --disable-install-rdoc --without-ext
     sh path/to/bm-run.sh
     ^C
     mkdir /tmp/dest

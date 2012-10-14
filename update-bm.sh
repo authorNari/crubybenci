@@ -9,7 +9,7 @@ git pull origin trunk:bench
 if [ -r Makefile ]
 then
     autoconf
-    ./configure --disable-install-rdoc --without-ext --enable-shared
+    ./configure --disable-install-rdoc --without-ext
 fi
 [ -r ../dest ] || mkdir ../dest
 
