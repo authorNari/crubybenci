@@ -6,7 +6,7 @@ cat <<END > index.html
 <title>CRuby Benchmark CI</title>
 </head>
 <body>
-<p>All scripts are here (<a href="https://gist.github.com/3887044">https://gist.github.com/3887044</a>)</p>
+<p>All scripts are here (<a href="https://github.com/authorNari/crubybenci">https://github.com/authorNari/crubybenci</a>)</p>
 <pre>Benchmark options:
 -r 3 -v --executables="r\${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --;r\${rev}-nogems::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext -- --disable-gems"</pre>
 END
