@@ -24,6 +24,7 @@ do
     echo 'set output "'$ipng'"' >> src.dat
     echo 'set title "'${i%.plot}'"' >> src.dat
     echo 'set xtics rotate by 260' >> src.dat
+    echo 'set yrange [0:*]' >> src.dat
     echo 'plot "'$i'" using 1:2 title "--enable-gems" with lines, "'$i'" using 1:3 title "--disable-gems" with lines' >> src.dat
     gnuplot src.dat
 done
