@@ -26,7 +26,7 @@ do
 
     if [ ! -r "bmlog/bm-${rev}.log" ]
     then
-        ruby benchmark/driver.rb -r 3 -v -o "bmlog/bm-${rev}.log" --executables="r${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --;r${rev}-nogems::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext -- --disable-gems" --pattern='bm_' --directory=./benchmark
+        ruby benchmark/driver.rb -r 5 -v -o "bmlog/bm-${rev}.log" --executables="r${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --" --pattern='bm_' --directory=./benchmark
         make clean
         git reset --hard 'HEAD~5'
     else
