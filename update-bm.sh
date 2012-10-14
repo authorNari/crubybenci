@@ -6,7 +6,7 @@ cd ruby
 git pull origin trunk:bench
 
 # setup
-if [ -r Makefile ]
+if [ ! -r Makefile ]
 then
     autoconf
     ./configure --disable-install-rdoc --without-ext
