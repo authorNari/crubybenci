@@ -1,6 +1,6 @@
 # CRuby Benchamrk CI
 
-Please see: http://crubybenci.github.com/
+Please see: http://www.narihiro.info/crubybenci
 
 Most codes are made by k-tsj (https://gist.github.com/3846866). Thanks!!
 
@@ -10,7 +10,7 @@ Most codes are made by k-tsj (https://gist.github.com/3846866). Thanks!!
     git clone git://github.com/ruby/ruby.git
     cd ruby
     autoconf
-    ./configure --disable-install-rdoc
+    ./configure --disable-install-rdoc --without-ext --enable-shared
     sh path/to/bm-run.sh
     ^C
     mkdir /tmp/dest
