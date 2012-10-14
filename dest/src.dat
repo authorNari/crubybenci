@@ -3,4 +3,4 @@ set output "vm_thread_pipe.png"
 set title "vm_thread_pipe"
 set xtics rotate by 260
 set yrange [0:*]
-plot "vm_thread_pipe.plot" using 1:2 title "--enable-gems" with lines, "vm_thread_pipe.plot" using 1:3 title "--disable-gems" with lines
+plot "vm_thread_pipe.plot" using 1:2 title "" with lines

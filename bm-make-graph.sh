@@ -8,7 +8,7 @@ cat <<END > index.html
 <body>
 <p>All scripts are here (<a href="https://github.com/authorNari/crubybenci">https://github.com/authorNari/crubybenci</a>)</p>
 <pre>Benchmark options:
--r 3 -v --executables="r\${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --;r\${rev}-nogems::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext -- --disable-gems"</pre>
+-r 5 -v --executables="r\${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --"</pre>
 END
 
 echo "<p>uname -a : $(uname -a)</p>" >> index.html
@@ -25,7 +25,7 @@ do
     echo 'set title "'${i%.plot}'"' >> src.dat
     echo 'set xtics rotate by 260' >> src.dat
     echo 'set yrange [0:*]' >> src.dat
-    echo 'plot "'$i'" using 1:2 title "--enable-gems" with lines, "'$i'" using 1:3 title "--disable-gems" with lines' >> src.dat
+    echo 'plot "'$i'" using 1:2 title "" with lines' >> src.dat
     gnuplot src.dat
 done
 
