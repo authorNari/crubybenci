@@ -8,7 +8,7 @@ x_label_every = (ARGV.shift || 1).to_i
 def logfile_to_hash(filepath)
   STDERR.puts filepath
   Hash[*open(filepath, &:read).each_line.drop_while {|i| ! (/\Abenchmark results:/ =~ i) }[3..-3]\
-                              .map {|i| bmname, *res, _ = i.chomp.split(/\t/); [bmname, res] }.flatten(1)]
+                              .map {|i| bmname, *res = i.chomp.split(/\t/); [bmname, [res[0]]] }.flatten(1)]
 end
 
 # all
