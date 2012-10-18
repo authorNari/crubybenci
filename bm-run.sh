@@ -30,7 +30,7 @@ do
         sudo sysctl -w vm.drop_caches=3
         timeout -2 3600 ruby benchmark/driver.rb -r 5 -v -o "bmlog/bm-${rev}.log" --executables="r${rev}::./ruby -I./lib -I. -I.ext/common ./tool/runruby.rb --extout=.ext --" --pattern='bm_' --directory=./benchmark
         make clean
-        git reset --hard 'HEAD~5'
+        git reset --hard 'HEAD~50'
     else
         git reset --hard 'HEAD~'
     fi
