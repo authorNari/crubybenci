@@ -3,7 +3,7 @@
 cd ruby
 
 # git pulling
-# git pull origin trunk:bench
+git pull origin trunk:bench
 
 # setup
 if [ ! -r Makefile ]
