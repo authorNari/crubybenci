@@ -17,7 +17,7 @@ echo "<p>Updated at : $(date --rfc-3339 seconds)</p>" >> index.html
 for i in *.plot
 do
     ipng="${i%.plot}.png"
-    echo '<a href="dest/'$i'">'$i'</a><br/>' >> index.html
+    echo '<a name="'$i'"><a href="dest/'$i'">'$i'</a></a><br/>' >> index.html
     echo '<img src="dest/'$ipng'" /><br />' >> index.html
     rm src.dat
     echo 'set terminal png' >> src.dat
