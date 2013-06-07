@@ -12,6 +12,7 @@ cat <<END > index.html
 END
 
 echo "<p>uname -a : $(uname -a)</p>" >> index.html
+echo "<p>gcc --version: $(gcc --version | head -n 1)" >> index.html
 echo "<p>Updated at : $(date --rfc-3339 seconds)</p>" >> index.html
 
 for i in *.plot
