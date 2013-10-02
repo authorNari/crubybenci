@@ -9,7 +9,7 @@ git pull origin trunk:bench
 if [ ! -r Makefile ]
 then
     autoconf
-    ./configure --disable-install-rdoc --with-out-ext
+    ./configure --disable-install-rdoc --with-out-ext --with-ext=thread
 fi
 [ -r ../dest ] || mkdir ../dest
 
