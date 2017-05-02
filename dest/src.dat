@@ -1,6 +1,6 @@
 set terminal png
-set output "vm_thread_sized_queue.png"
-set title "vm_thread_sized_queue"
+set output "vm_thread_sized_queue4.png"
+set title "vm_thread_sized_queue4"
 set xtics rotate by 260
 set yrange [0:*]
-plot "vm_thread_sized_queue.plot" using 1:2 title "" with lines
+plot "vm_thread_sized_queue4.plot" using 1:2 title "" with lines
